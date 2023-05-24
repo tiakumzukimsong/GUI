@@ -1,4 +1,5 @@
 import pyautogui
+import time
 
 def file():
     file = pyautogui.locateCenterOnScreen("file.png",grayscale=True, confidence=.8)
@@ -17,40 +18,71 @@ def newtab():
     nt = pyautogui.locateCenterOnScreen("newtab.png",grayscale=True, confidence=.8)
     
 
-    # pyautogui.click(nt)
-    # a = searchbar()
+    pyautogui.click(nt)
     
-    print(nt)
-    # print(a)
-    # print(nt)
-    # print(gm)
+    
+  
+    instagram()
 
-# def gmail():
-#     gm = pyautogui.locateCenterOnScreen("gmail.png",grayscale=True, confidence=0.9)
-#     pyautogui.click(gm)
-    # pyautogui.moveTo(gm)
+def instagram():
+    text = "instagram.com"
+    pyautogui.typewrite(text)
+    pyautogui.press("enter")
+    
+    instagram_message()
 
+def instagram_message():
+    time.sleep(5)
+    messages = pyautogui.locateCenterOnScreen("instagram_messages.png", grayscale=True,confidence=0.85)
+    pyautogui.click(messages)
+    imlikumla()
 
-def searchbar():
-    search_bar = pyautogui.locateCenterOnScreen("search_bar.png", grayscale=False,confidence=0.7)
-    # search_bar_center = pyautogui.center(search_bar)
-    
-    print(search_bar)
-    # pyautogui.click(search_bar)
+def imlikumla():
+    time.sleep(5)
+    im = pyautogui.locateCenterOnScreen("imlikumla_message.png", grayscale=True, confidence=.85)
+    pyautogui.click(im)
+    message_imli()
 
-def google():
-    gg = pyautogui.locateOnScreen("google.png", grayscale=True,confidence=0.9)
-    
-    pyautogui.click(gg)
-    newtab()
-    # print(gg)
-    # gmail()
-    
+def message_imli():
+    time.sleep(5)
+    text_imli = pyautogui.locateCenterOnScreen("instagram_inside_message.png", grayscale=True,confidence=.85)
+    pyautogui.click(text_imli)
+    text= "I'm texting using my automatic texting machine HUHUHUHUHUHUHU"
+    pyautogui.typewrite(text)
+    pyautogui.press("enter")
     
 
     
-searchbar()
+# searchbar()
 # google()
-# newtab()
+newtab()
 # file()
 
+
+
+
+
+
+
+# def gmail():
+ 
+    
+#     text = "gmail.com"
+#     pyautogui.typewrite(text)
+#     pyautogui.press("enter")
+
+
+    
+# def whatsapp():
+#     text = "web.whatsapp.com"
+#     pyautogui.typewrite(text)
+#     pyautogui.press("enter")
+
+
+# def google():
+#     gg = pyautogui.locateOnScreen("google.png", grayscale=True,confidence=0.9)
+    
+#     pyautogui.click(gg)
+#     newtab()
+#     # print(gg)
+#     # gmail()
