@@ -39,7 +39,7 @@ def instagram_message():
 
 def imlikumla():
     time.sleep(5)
-    im = pyautogui.locateCenterOnScreen("imlikumla_message.png", grayscale=True, confidence=.85)
+    im = pyautogui.locateCenterOnScreen("message.png", grayscale=True, confidence=.85)
     pyautogui.click(im)
     message_imli()
 
@@ -49,7 +49,7 @@ def message_imli():
     pyautogui.click(text_imli)
     text= "I'm texting using my automatic texting machine HUHUHUHUHUHUHU"
     pyautogui.typewrite(text)
-    pyautogui.press("enter")
+    # pyautogui.press("enter")
     
 
     
